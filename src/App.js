@@ -7,7 +7,7 @@ import "./App.css";
 // import search Icon which is a svg
 import SearchIcon from "./search.svg";
 
-const API_URL = "https://www.omdbapi.com?apikey=69c44be5";
+const API_URL = "https://www.omdbapi.com?apikey=PUT YOUR API KEY IN HERE";
 
 const App = () => {
   // create new State, setMovies function will receive 10 Movies
@@ -20,12 +20,11 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   // 2 Step
-  // ...
   // async = lets the Fn know that we are using asynchronous code
   // searchMovies Fn accepts title as parameter
   const searchMovies = async (title) => {
     // await = waiting till we get the date
-    // fetch API_URL and append to it &s=${title}
+    // fetch API_URL and append to it &s=${title} (searchTerm)
     const response = await fetch(`${API_URL}&s=${title}`);
     // convert response to a json file
     // data is now the json file which is an object
