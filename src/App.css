@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #222222;
+}
+.app h1 {
+  letter-spacing: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.search input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  color: #e3dda5;
+  background: #5c5a7a;
+  width: 40rem;
+}
+.search img {
+  cursor: pointer;
+}
+
+.empty h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.25rem;
+  color: #f9d3b4;
+}
+
+.container {
+  display: grid;
+  /* 250px is the min width of picture and it will put as many picture as possible to each other, when picture gets smaller than 300 it will drop in row below */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 6rem;
+  column-gap: 3rem;
+  padding: 2rem 0rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5rem;
+}
+
+.movie {
+  color: white;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000000;
+  box-shadow: 12px 12px 18px rgb(0, 0, 0);
+  border-radius: 7px 7px 0px 0px;
+}
+
+.info p,
+span {
+  margin: 0.1rem 0.6rem;
+  color: white;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 16px 16px 22px rgb(0, 0, 0);
+  border-radius: 0px 0px 7px 7px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.movie img:hover {
+  box-shadow: 9px 9px 12px rgb(0, 0, 0);
+}
+
+.movie h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .search input {
+    width: 18rem;
+  }
+}
